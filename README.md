@@ -38,7 +38,7 @@ Backend API for **rav**, a personal budget tracking POC. The app lets you track,
 ## Getting started
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/poitouBenjamin/rav-backend.git
 cd rav-api
 cp .env.example .env
 docker compose up --build
