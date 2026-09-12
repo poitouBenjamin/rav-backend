@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  # Service PostgreSQL
+  rav-db:
+    image: postgres:16
+    container_name: rav-db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Zidaneencore10!
+      POSTGRES_DB: rav-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - rav_pgdata:/var/lib/postgresql/data
+
+  # Service Adminer
+  adminer:
+    image: adminer
+    container_name: rav-adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  rav_pgdata:
